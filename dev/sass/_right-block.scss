@@ -1,0 +1,128 @@
+.right-block {
+  
+  float: right;
+  right: 0;
+  margin-top: -87px;
+
+
+  width: 788px;
+  box-sizing: border-box;
+  background-image: url(../img/plane.png);
+  background-repeat: no-repeat;
+  background-position: 30px top;
+  padding-bottom: 25px;
+
+  @media (max-width: 960px) {
+    width: 50%;
+    background-image: none;
+    margin-top: -37px;
+  }
+
+  @media (max-width: 700px) {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+.services-list {
+  position: relative;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+  @media (max-width: 960px) {
+    &::before {
+      position: absolute;
+      content: "";
+      width: 1px;
+      height: 80%;
+      top: 50%;
+      left: 38px;
+      transform: translateY(-50%);
+      border-right: 1px dashed #d3d3d3;
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 90px;
+
+    &:not(:last-child) {
+      margin-bottom: 100px;
+
+      @media (max-width: 960px) {
+        margin-bottom: 50px;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 76px;
+      height: 76px;
+      top: 62%;
+      left: 0;
+      transform: translateY(-50%);
+      background-color: #454;
+      background-position: center center;
+      background-repeat: no-repeat;
+      border-radius: 50%;
+    }
+
+    &-sale {
+      margin-left: 29.8223%; /*235px*/
+    }
+
+    &-sale::before {
+      background-color: #71cff3;
+      background-image: url(../img/bosta.png);
+      box-shadow: 0 0 0 3px rgba(113, 207, 243, 0.18);
+    }
+
+    &-strategy {
+      margin-left: 5.3491%; /*55px*/
+    }
+
+    &-strategy::before {
+      background-color: #fdc153;
+      background-image: url(../img/project-completed.png);
+      box-shadow: 0 0 0 3px rgba(235, 193, 83, 0.18);
+    }
+
+    &-analytics::before {
+      background-color: #fa8171;
+      background-image: url(../img/client.png);
+      box-shadow: 0 0 0 3px rgba(250, 129, 113, 0.18);
+    }
+
+    @media (max-width: 960px) {
+      &-sale,
+      &-strategy {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 400;
+  margin-top: 20px;
+  padding-top: 30px;
+  margin-bottom: 5px;
+  color: #333333;
+
+  @media (max-width: 960px) {
+    font-size: 20px;
+  }
+}
+
+.description {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: .5px;
+  margin: 0 0 5px 0;
+  color: #232323;
+  text-transform: uppercase;
+}
