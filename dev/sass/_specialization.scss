@@ -1,0 +1,129 @@
+.specialization {
+
+  width: 68%;
+
+  max-width: 710px;
+  box-sizing: border-box;
+
+  @media (max-width: 960px) {
+    width: 50%;
+    padding-right: 10px;
+  }
+
+  @media (max-width: 700px) {
+    width: 100%;
+  }
+  
+  &__title {
+    font-size: 35px;
+    line-height: 60px;
+    margin-top: 0;
+    color: #232323;
+    text-transform: uppercase;
+
+    @media (max-width: 960px) {
+      font-size: 28px;
+      line-height: 40px;
+    }
+
+    @media (max-width: 700px) {
+      text-align: center;
+    }
+
+    span {
+      display: inline-block;
+      font-size: 45px;
+      border-bottom: 3px solid #e99544;
+
+      @media (max-width: 960px) {
+        font-size: 30px;
+      }
+    }
+  }
+
+  &__description {
+    font-size: 14px;
+    color: #777777;
+    animation: drop 2s;
+  }
+
+  &__btn {
+    position: relative;
+    display: block;
+    font-size: 12px;
+    max-width: 190px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 15px 35px;
+    border-radius: 50px;
+    color: #ffffff;
+    background-color: #27ae61;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: all .3s ease;
+    animation: dropBtn 1s cubic-bezier(.26,.95,.01,.08);
+
+    /*&:hover {
+      color: #000000;
+      background-color: #ffffff;
+      border: 1px solid #000000;
+      box-shadow: inset 0 0 5px 0 #27ae61;
+    }*/
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      border-radius: 50px;
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, .01),0 0 0 4px rgba(0, 0, 0, 0.08);
+      opacity: 1;
+      transition: all .3s ease;
+    }
+
+    &:hover::after {
+      transform: scale(1.3);
+      opacity: 0;
+    }
+
+
+
+    @media (max-width: 700px) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+
+@keyframes drop {
+  0% {
+    transform: translateY(-300px);
+    opacity: 0;
+  };
+
+  90% {
+    opacity: 1;
+  };
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  };
+}
+
+@keyframes dropBtn {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  };
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  };
+}
